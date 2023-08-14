@@ -1,0 +1,87 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3
+Full Name  : Ashwin B N
+Student ID#: 112763222
+Email      : abharathan-nettoor@myseneca.ca
+Section    : NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1. The three functions are the following:
+    a) void sortAppointmentsByDate(struct ClinicData* data);
+       This function is responsible for sorting the array of appointment records
+       in the ClinicData structure based on the appointment date and time. It 
+       uses a bubble sort algorithm to iterate through the appointment array 
+       and compare the dates and times of each appointment. If two appointments
+       have the same date, it compares their times to ensure proper chronological
+       order. This sorting process is impportant for displaying appointments in
+       an organized and easy-to-read manner when viewing appointment schedules.
+       By arranging appointments in ascending order of dates and times, users
+       can quickly see the order of scheduled appointments, helping clinic staff
+       efficiently manage their schedules.
+
+    b) int isNotEmpty(const struct Appointment* appointment);
+       The isNotEmpty function checks whether an appointment slot is occupied or
+       not based on the patient ID. If an appointment slot is not empty, it means
+       that there is a scheduled appointment in that slot. This function is used in
+       various parts of the code, especially when iterating through the appointment
+       array to display or manage appointments. By determining whether an appointment
+       slot is occupied or not, this function helps prevent displaying or interacting
+       with empty appointment slots, ensuring that only valid appointments are 
+       considered. This is essential for accurately presenting appointment schedules
+       and making changes to existing appointments.
+
+    c) int findIndexByDate(int patientID, struct Date date,
+            const struct Appointment appoints[], int maxAppoints);
+       This function takes a patient's ID, a specific date, an array of appointments,
+       and the maximum number of appointments as input. It iterates through the 
+       appointment array, comparing the patient ID and date with each appointment. If
+       a matching appointment is found, the function returns the index of that appointment
+       otherwise, it returns -1. This function is essential for efficient retrieval of 
+       appointment indexes, enabling actions like appointment removal or viewing 
+       appointments for a particular date.
+
+2. The reason we didn't use `scanf` a lot in the `client.c` file is because `scanf` can
+be a bit tricky and may lead to problems. It's like trying to catch a slippery fish with
+your hands – it might slip away or even bite you! So, we decided to use some simpler and
+safer ways to get input from the user.
+We made our own special functions for getting numbers or characters from the user. These
+functions make sure the numbers are positive or the characters are the right ones 
+(like 'y' or 'n'). This helps prevent our program from getting confused and doing weird 
+stuff.
+Also, `scanf` can sometimes cause the computer to freak out if the user types too much 
+or in a weird way. It's like trying to make your cat do a backflip – it might not go well!
+So, we use our own functions to get strings of text from the user. These functions make 
+sure the text is the right length and fits nicely.
+All in all, we're using these special functions to keep our program safe, like putting a
+seatbelt on your teddy bear before going for a drive. It might seem a bit complicated at
+first, but it helps make sure everything runs smoothly and we don't run into any 
+unexpected troubles!
+
+3. 
+
+a) sortAppointmentsByDate: This function has been placed within the "clinic" module
+because it directly handles the sorting of appointment data based on date and time. It 
+is closely related to the appointment management functionality, which is the main focus 
+of the "clinic" module. The decision to place it here is driven by the need for 
+modularity and separation of concerns, ensuring that appointment-related operations 
+are grouped together for clarity and maintainability.
+
+b) isNotEmpty: This function has been placed within the "clinic" module as well. It 
+serves as a utility function to check whether an appointment is empty or not. Since it 
+directly relates to appointment records and their validation, it fits logically within 
+the "clinic" module where appointment-related functions and data structures reside. 
+This placement helps keep the code organized and allows other functions within the same 
+module to easily validate appointment data.
+
+c) findIndexByDate: This function has been placed in the "utility" module. It is a 
+general-purpose utility function that operates independently of specific modules and
+data structures. The function is responsible for finding the index of an appointment 
+based on patient ID and date, which is not tied to any particular module's core 
+functionality. Placing it in the "utility" module promotes reusability and ensures that
+similar search operations in different modules can leverage the same utility.

@@ -34,5 +34,9 @@ This project is part of my coursework for IPC144 at Seneca. The aim is to develo
 ## Reflection
 Reflecting on the project journey and learning experiences will be documented and evaluated as part of the course requirements. 
 
+## Credits
+- **Author**: Ashwin B N
+- **Institution**: Seneca College
+- **Course**: IPC144
 ---
 As a student at Seneca, I'm open to feedback and collaboration on this project. Feel free to reach out for any suggestions, improvements, or inquiries.

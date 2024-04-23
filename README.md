@@ -32,7 +32,7 @@ This project is part of my coursework for IPC144 at Seneca. The aim is to develo
 - Contributions and feedback from peers and educators are welcomed.
 
 ## Reflection
-Reflecting on the project journey and learning experiences will be documented and evaluated as part of the course requirements. 
+Reflecting on the project journey and learning experiences. 
 
 ## Credits
 - **Author**: Ashwin B N
